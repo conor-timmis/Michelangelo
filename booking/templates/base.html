@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Logo</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'menu' %}">Menu</a></li>
+                    <li><a href="#">Login/Signup</a></li>
+                    <li><a href="#">Book a table</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div>
+
+        <h1>Welcome to Our Website</h1>
+        <p>This is some sample content.</p>
+    </div>
+    
+    
+    {% block content %}
+    {% endblock %}
+    
+    </body>
+    </html>
