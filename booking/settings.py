@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = []
-host = os.environ.get("ALLOWED_HOST")
+host = os.environ.get("ALLOWED_HOSTS")
 if host:
     ALLOWED_HOSTS.append(host)
 
