@@ -4,9 +4,12 @@
 
 {% block content %}
   <h2>{% trans "Sign Up" %}</h2>
-  <form method="POST">
+  <form method="POST" action="{% url 'account_signup' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">{% trans "Sign Up" %}</button>
+  <p>
+    Already have an account? <a href="{% url 'account_login' %}">{% trans "Login here" %}</a>.
+  </p>
   </form>
 {% endblock %}

@@ -95,6 +95,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'booking.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-conortimmis-michelangel-7x7a0jxhhhi.ws-eu115.gitpod.io']
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
