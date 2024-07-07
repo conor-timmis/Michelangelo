@@ -94,14 +94,12 @@
 
 <!-- Footer Section -->
 <footer class="footer navbar-fixed-bottom bg-dark text-white pt-5 mt-2">
-    <div class="container text-center">
-        <row class="d-none d-sm-block">
+    <div class="container text-center d-flex flex-column justify-content-center" style="height: 20vh;">
+        <div class="row d-none d-sm-block">
             <h3>Michelangelo</h3>
             <p>We are independent. We are unique. We are dedicated.</p>
-        </row>
-    </div>
-    <div class="container">
-        <div class="row text-center small d-flex justify-content-between">
+        </div>
+        <div class="row text-center small d-flex justify-content-between mb-3">
             <h5 class="text-uppercase font-weight-bold text-success">Contact</h5>
             <div class="col-md-3 col-sm-12">
                 <p>
@@ -122,11 +120,9 @@
                 </p>            
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <p class="text-center text-md-left">Copyright &copy; {% now "Y" %}</p>
+                <p class="text-center text-md-left">Copyright © {% now "Y" %}</p>
             </div>
             <div class="col-md-6">
                 <ul class="list-unstyled row justify-content-between">
