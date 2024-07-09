@@ -1,5 +1,75 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Menu</p>
-{% endblock %}
+
+<section id="menu" class="menu section-bg bg-dark section-padding-menu">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title-menu text-white text-center white-text">
+        <h2>Menu</h2>
+      </div>
+      <div class="row menu-container text-white" data-aos="fade-up" data-aos-delay="200">
+        <div class="section-title-menu text-warning text-center ">
+            <h4>Starters</h4>
+        </div>
+        <!-- Starters -->
+        <div class="col-lg-6 menu-item">
+          <div class="menu-dishes">
+            Zuppa del Giorno (V)<span>£7.5</span>
+          </div>
+          <div class="menu-desc">
+            Soup of the day served with homemade rustic bread.
+          </div>
+        </div>
+        <div class="col-lg-6 menu-item">
+          <div class="menu-dishes">
+            Funghi all’ Aglio (V)<span>£8.5</span>
+          </div>
+          <div class="menu-desc">
+            Mixed mushrooms in a garlic butter sauce, cream and port, served in a filo pastry basket.
+          </div>
+        </div>
+        <div class="section-title-menu text-warning text-center ">
+            <h4>Mains</h4>
+        </div>
+        <!-- Mains -->
+        <div class="col-lg-6 menu-item">
+          <div class="menu-dishes">
+            Vitello Milanese<span>£20</span>
+          </div>
+          <div class="menu-desc">
+            Pan-fried veal escalope coated in breadcrumbs, rocket salad, Parmesan shavings.
+          </div>
+        </div>
+        <div class="col-lg-6 menu-item">
+          <div class="menu-dishes">
+            Vegalangelo (VE)<span>£17</span>
+          </div>
+          <div class="menu-desc">
+            King oyster mushrooms, asparagus, heritage carrots, beetroot, asparagus velouté, celeriac purée.
+          </div>
+        </div>
+        <div class="section-title-menu text-warning text-center ">
+            <h4>Desserts</h4>
+        </div>
+        <!-- Desserts -->
+        <div class="col-lg-6 menu-item">
+          <div class="menu-dishes">
+            Tiramisu<span>£6.95</span>
+          </div>
+          <div class="menu-desc">
+            The ultimate Italian trifle made with savoiardi biscuits, cream, coffee and Amaretto liqueur.
+          </div>
+        </div>
+        <div class="col-lg-6 menu-item">
+          <div class="menu-dishes">
+            Cheesecake of the day<span>£7.15</span>
+          </div>
+          <div class="menu-desc">
+            Please ask a member of the staff about our freshly prepared homemade cheesecake.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </section>
+  {% endblock %}
