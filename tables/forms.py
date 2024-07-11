@@ -1,9 +1,12 @@
 from django import forms
+from datetime import time, timedelta
 from .models import Booking
 
 class BookingForm(forms.ModelForm):
     meal_day = forms.DateField(widget=forms.TextInput(attrs={'class': 'datepicker'}))
-    meal_time = forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time', 'class': 'meal-time'}))
+
+    MEAL_TIME_CHOICES = [(time(hour=h, minute=m).strftime('%H:%M'), time(hour=h, minute=m).strftime('%H:%M')) for h in range(14, 21) for m in range(0, 60, 15) if not (h == 20 and m > 0)]
+    meal_time = forms.ChoiceField(choices=MEAL_TIME_CHOICES)
 
     class Meta:
         model = Booking
