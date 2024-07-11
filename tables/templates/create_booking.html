@@ -17,15 +17,7 @@
         {{ form.meal_day }}
         <br>
         <label for="id_meal_time">Meal Time:</label>
-        <select id="id_meal_time" name="meal_time">
-            {% for value, label in form.fields.meal_time.choices %}
-                {% if not value in booked_times %}
-                    <option value="{{ value }}">{{ label }}</option>
-                {% else %}
-                    <option value="{{ value }}" style="color: red;" disabled>{{ label }} (Booked)</option>
-                {% endif %}
-            {% endfor %}
-        </select>
+        {{ form.meal_time }}
         <br>
         <label for="id_number_of_guests">Number of Guests:</label>
         {{ form.number_of_guests }}
