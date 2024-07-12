@@ -1,5 +1,6 @@
+from django.core.exceptions import ValidationError
 from django import forms
-from datetime import time, timedelta
+from datetime import time, timedelta, datetime
 from .models import Booking
 
 class BookingForm(forms.ModelForm):
@@ -11,6 +12,13 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['special_occasion', 'meal_day', 'meal_time', 'number_of_guests', 'customer_name']
+
+    def clean_meal_time(self):
+        meal_time_str = self.cleaned_data.get('meal_time')
+        if meal_time_str is not None:
+            return datetime.strptime(meal_time_str, '%H:%M').time()
+        else:
+            return None
 
     def clean(self):
         cleaned_data = super().clean()

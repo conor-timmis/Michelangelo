@@ -1,40 +1,28 @@
-from django.core.exceptions import ValidationError
+from django import forms
 from django.db import models
-from django.contrib.auth.models import User
-from django.utils.timezone import now
-from django.core.validators import MinValueValidator, MaxValueValidator
-from datetime import datetime, timedelta
+from django.conf import settings
 
 # Create your models here.
 
-#TIME_CHOICES = (
-
-#('12:00', '12:00'),
-#('13:00', '13:00'),
-#('14:00', '14:00'),
-
-#)
-
 class Booking(models.Model):
-
-    name = models.ForeignKey(User, on_delete=models.CASCADE)
-    special_occasion = models.CharField(max_length=11, choices=[('Anniversary', 'anniversary'), ('Date', 'date'), ('Business', 'business')])
+    SPECIAL_OCCASIONS = (
+        ('BD', 'Birthday'),
+        ('AN', 'Anniversary'),
+        ('OT', 'Other'),
+    )
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+    special_occasion = models.CharField(max_length=20, choices=SPECIAL_OCCASIONS)
     meal_day = models.DateField()
-    meal_time = models.TimeField()    
-    number_of_guests = models.PositiveIntegerField(
-        null=True,
-        validators=[MinValueValidator(1), MaxValueValidator(6)]
-    )    
-    customer_name = models.CharField(max_length=50)
+    meal_time = models.TimeField()
+    number_of_guests = models.IntegerField()
+    customer_name = models.CharField(max_length=100)
+    is_booked = models.BooleanField(default=False)
 
-
-
-    def clean(self):
-        if self.meal_day and self.meal_day < now().date():
-            raise ValidationError("Sorry, you cannot make a booking in the past.")
-
-        existing_bookings = Booking.objects.filter(meal_time=self.meal_time, meal_day=self.meal_day)
-        if self.pk:
-            existing_bookings = existing_bookings.exclude(pk=self.pk)
-        if existing_bookings.exists():
-            raise ValidationError("Sorry, a booking already exists at this time on this day.")
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['special_occasion', 'meal_day', 'meal_time', 'number_of_guests', 'customer_name', 'is_booked']
+        widgets = {
+            'meal_day': forms.DateInput(attrs={'class': 'datepicker'}),
+            'meal_time': forms.TimeInput(format='%H:%M'),
+        }

@@ -14,7 +14,7 @@ def create_booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            booking.name = request.user
+            booking.user = request.user
             booking.save()
             messages.success(request, 'Booking created successfully!')
             return redirect('table_list')
@@ -26,7 +26,7 @@ def create_booking(request):
 @login_required
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, pk=booking_id)
-    if booking.name != request.user:
+    if booking.user != request.user:
         messages.error(request, 'You do not have permission to edit this booking.')
         return redirect('table_list')
     if request.method == 'POST':
@@ -43,7 +43,7 @@ def edit_booking(request, booking_id):
 @login_required
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, pk=booking_id)
-    if booking.name != request.user:
+    if booking.user != request.user:
         messages.error(request, 'You do not have permission to delete this booking.')
         return redirect('table_list')
     if request.method == 'POST':
@@ -58,5 +58,5 @@ def booking_list(request):
     if request.user.is_superuser:
         bookings = Booking.objects.all()
     else:
-        bookings = Booking.objects.filter(name=request.user)
+        bookings = Booking.objects.filter(user=request.user)
     return render(request, 'table_list.html', {'bookings': bookings})
