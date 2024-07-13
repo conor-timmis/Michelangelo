@@ -56,7 +56,7 @@ def delete_booking(request, booking_id):
 @login_required
 def booking_list(request):
     if request.user.is_superuser:
-        bookings = Booking.objects.all()
+        bookings = Booking.objects.all()  
     else:
         bookings = Booking.objects.filter(user=request.user)
     return render(request, 'table_list.html', {'bookings': bookings})
