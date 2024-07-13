@@ -16,6 +16,7 @@
             {% csrf_token %}
             <input type="hidden" name="booking_id" value="{{ booking.id }}">
             <input type="submit" value="Delete">
+            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
         </form>
     </li>
     {% endfor %}

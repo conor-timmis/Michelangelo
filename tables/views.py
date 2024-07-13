@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
+from django.db import IntegrityError
 
 # Create your views here.
 
@@ -15,7 +16,11 @@ def create_booking(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
-            booking.save()
+            try:
+                booking.save()
+            except IntegrityError:
+                form.add_error(None, 'You have already made this booking.')
+                return render(request, 'create_booking.html', {'form': form})
             messages.success(request, 'Booking created successfully!')
             return redirect('table_list')
     else:

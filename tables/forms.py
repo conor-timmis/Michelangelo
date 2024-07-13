@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 from django import forms
 from datetime import time, timedelta, datetime
 from .models import Booking
+from django.db import models
 
 class BookingForm(forms.ModelForm):
     meal_day = forms.DateField(widget=forms.TextInput(attrs={'class': 'datepicker'}))
@@ -12,6 +13,9 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['special_occasion', 'meal_day', 'meal_time', 'number_of_guests', 'customer_name']
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'meal_day', 'meal_time', 'special_occasion'], name='unique_booking')
+        ]
 
     def clean_meal_time(self):
         meal_time_str = self.cleaned_data.get('meal_time')

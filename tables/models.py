@@ -6,9 +6,9 @@ from django.conf import settings
 
 class Booking(models.Model):
     SPECIAL_OCCASIONS = (
-        ('BD', 'Birthday'),
-        ('AN', 'Anniversary'),
-        ('OT', 'Other'),
+        ('Bday', 'Birthday'),
+        ('Anv.', 'Anniversary'),
+        ('Other', 'Other'),
     )
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     special_occasion = models.CharField(max_length=20, choices=SPECIAL_OCCASIONS)
@@ -18,11 +18,7 @@ class Booking(models.Model):
     customer_name = models.CharField(max_length=100)
     is_booked = models.BooleanField(default=False)
 
-class BookingForm(forms.ModelForm):
     class Meta:
-        model = Booking
-        fields = ['special_occasion', 'meal_day', 'meal_time', 'number_of_guests', 'customer_name', 'is_booked']
-        widgets = {
-            'meal_day': forms.DateInput(attrs={'class': 'datepicker'}),
-            'meal_time': forms.TimeInput(format='%H:%M'),
-        }
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'meal_day', 'meal_time', 'special_occasion'], name='unique_booking')
+        ]
