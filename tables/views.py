@@ -30,10 +30,7 @@ def create_booking(request):
 # To edit a booking
 @login_required
 def edit_booking(request, booking_id):
-    booking = get_object_or_404(Booking, pk=booking_id)
-    if booking.user != request.user:
-        messages.error(request, 'You do not have permission to edit this booking.')
-        return redirect('table_list')
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():

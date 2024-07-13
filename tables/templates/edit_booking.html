@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Edit Booking Page</p>
-{% endblock %}
+<h2>Edit Booking</h2>
 
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save changes</button>
+</form>
+
+{% endblock %}
