@@ -12,6 +12,11 @@
         <p>Meal Day: {{ booking.meal_day }}</p>
         <p>Meal Time: {{ booking.meal_time }}</p>
         <p>Number of Guests: {{ booking.number_of_guests }}</p>
+        <form method="post" action="{% url 'delete_booking' %}">
+            {% csrf_token %}
+            <input type="hidden" name="booking_id" value="{{ booking.id }}">
+            <input type="submit" value="Delete">
+        </form>
     </li>
     {% endfor %}
 </ul>
