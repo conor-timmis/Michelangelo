@@ -84,6 +84,88 @@
     color: #f8f9fa;
 }
 
+/* Menu Styles */
+
+#menu {
+    background-color: #7ebfbb;
+}
+
+.section-padding {
+    padding: 50px 0;
+}
+
+.section-padding-menu {
+    padding: 100px;
+    margin-bottom: 0;
+}
+
+.section-title-menu {
+    padding-top: 40px;
+}
+
+.menu .menu-item {
+    margin-top: 50px;
+}
+  
+.menu .menu-img {
+    width: 70px;
+    border-radius: 50%;
+    float: left;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+  
+.menu .menu-dishes {
+    margin-left: 85px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.fas.fa-leaf {
+    color: green;
+    margin-left: 5px;
+}
+
+.fas.fa-seedling {
+    color: green;
+    margin-left: 5px;
+}
+
+.section-title-menu h4 {
+    color: #fff;
+}
+
+.menu .menu-dishes span {
+    color: #fff;
+}
+
+
+.menu .menu-dishes span {
+    position: relative;
+    z-index: 3;
+    padding: 0 10px;
+    font-weight: 600;
+    color: #fff;
+}
+  
+.menu .menu-desc {
+    margin-left: 85px;
+    font-style: italic;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fas.fa-leaf {
+    color: green;
+    margin-right: 5px;
+}
+
+.fas.fa-seedling {
+    color: green;
+    margin-right: 5px;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 576px) {
     .underline-navbar::after {
