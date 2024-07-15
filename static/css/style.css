@@ -1,42 +1,103 @@
-.navbar {
-    padding: 10px 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+/* Base Template Styles */
+* {
+    font-family: "Inter", sans-serif;
+    color: white;
 }
 
-.container {
-    max-width: auto;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Navbar Styles */
+.navbar.fixed-top {
+    background-color: #f8f9fa;
 }
 
-.navbar .nav-link, .navbar .navbar-brand {
+.navbar-brand {
+    color: #343a40;
+}
+
+.nav-link {
+    color: #343a40;
+}
+
+.button-nav-booking .btn {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #343a40;
+}
+
+.messages {
     color: #fff;
 }
 
-.logo a {
+.alert {
+    background-color: #333;
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
 }
 
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+#id_special_occasion, #id_meal_day, #id_meal_time, #id_number_of_guests, #id_customer_name, #id_submit_button {
+    background-color: #333;
+    color: #fff; 
+    border: 1px solid #333; 
 }
 
-.menu ul li {
-    display: inline;
-    margin-right: 20px;
+.form_container {
+    border: solid white 8px;
 }
 
-.menu ul li a {
-    color: #000;
-    text-decoration: none;
+.error_message_notes {
+    background-color: #333;
+    color: #fff;
 }
 
-.menu ul li a:hover {
-    text-decoration: underline;
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+}
+
+.footer h3, .footer p, .footer a {
+    color: #343a40;
+}
+
+.footer .btn-floating {
+    color: #343a40;
+}
+
+.footer .btn-floating:hover {
+    color: #f8f9fa;
+    background-color: #343a40;
+}
+
+.footer .btn-floating i {
+    color: #343a40;
+}
+
+.footer .btn-floating:hover i {
+    color: #f8f9fa;
+}
+
+.footer .fas {
+    color: #343a40;
+}
+
+.footer .fas:hover {
+    color: #f8f9fa;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 576px) {
+    .underline-navbar::after {
+        content: '';
+        padding:0;
+        opacity: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #343a40;
+        display: block;
+        transition: opacity 0.2s;
+    }
+    
+    .underline-navbar:hover::after {
+        opacity: 1;
+    }
 }

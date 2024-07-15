@@ -15,41 +15,41 @@
 
     <!-- Navbar Section -->
     <header>
-        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-dark p-2">
-            <a href="#" class="navbar-brand mb-0 h1 px-5 text-white">
+        <nav class="navbar fixed-top navbar-expand-sm">
+            <a href="#" class="navbar-brand mb-0 h1 px-5">
                 Michelangelo
             </a>
             <button type="button" class="navbar-toggler bg-white" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse text-white justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav px-5 text-center">
                     <li class="nav-item">
-                        <a href="{% url 'index' %}" class="nav-link text-white underline-navbar">Home</a>
+                        <a href="{% url 'index' %}" class="nav-link underline-navbar">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'menu' %}" class="nav-link text-white underline-navbar">Menu</a>
+                        <a href="{% url 'menu' %}" class="nav-link underline-navbar">Menu</a>
                     </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a href="{% url 'logout' %}" class="nav-link text-white underline-navbar">Logout</a>
+                            <a href="{% url 'logout' %}" class="nav-link underline-navbar">Logout</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Bookings
                             </a>
                             <div class="dropdown-menu bg-dark text-center p-2 fade" aria-labelledby="navbarDropdown bg-dark">
     
-                                <a href="{% url 'create_booking' %}" class="nav-link text-white dropdown-navitems">Make a booking</a>
-                                <a href="{% url 'table_list' %}" class="nav-link text-white dropdown-navitems">Manage a booking</a>
+                                <a href="{% url 'create_booking' %}" class="nav-link dropdown-navitems">Make a booking</a>
+                                <a href="{% url 'table_list' %}" class="nav-link dropdown-navitems">Manage a booking</a>
                             </div>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a href="{% url 'account_login' %}" class="nav-link text-white underline-navbar">Login</a>
+                            <a href="{% url 'account_login' %}" class="nav-link underline-navbar">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'account_signup' %}" class="nav-link text-white underline-navbar">Register</a>
+                            <a href="{% url 'account_signup' %}" class="nav-link underline-navbar">Register</a>
                         </li>
                     {% endif %}
                     <div class="button-nav-booking px-3">
@@ -93,7 +93,7 @@
 {% endblock %}
 
 <!-- Footer Section -->
-<footer class="footer navbar-fixed-bottom bg-dark text-white pt-5 mt-2">
+<footer class="footer navbar-fixed-bottom pt-5 mt-2">
     <div class="container text-center d-flex flex-column justify-content-center" style="height: 20vh;">
         <div class="row d-none d-sm-block">
             <h3>Michelangelo</h3>
@@ -128,21 +128,21 @@
                 <ul class="list-unstyled row justify-content-between">
                     <div class="col-md-4 ">
                         <li class="">
-                            <a href="https://facebook.com" target="_blank" class="btn-floating btn-sm text-white">
+                            <a href="https://facebook.com" target="_blank" class="btn-floating btn-sm">
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </li>
                     </div>
                     <div class="col-md-4 ">
                         <li class="">
-                            <a href="https://twitter.com/" target="_blank" class="btn-floating btn-sm text-white">
+                            <a href="https://twitter.com/" target="_blank" class="btn-floating btn-sm">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                     </div>
                     <div class="col-md-4 ">
                         <li class="">
-                            <a href="https://youtube.com" target="_blank" class="btn-floating btn-sm text-white">
+                            <a href="https://youtube.com" target="_blank" class="btn-floating btn-sm">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
