@@ -84,6 +84,14 @@
     color: #f8f9fa;
 }
 
+/* Index Styles */
+
+.carousel-item img {
+    max-height: 750px;
+    width: auto;
+    object-fit: cover;
+}
+
 /* Menu Styles */
 
 #menu {
