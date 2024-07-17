@@ -6,6 +6,10 @@
     font-family: "Inter", sans-serif;
 }
 
+body {
+    padding-top: 40px;
+}
+
 /* Navbar Styles */
 .navbar.fixed-top {
     background-color: #f8f9fa;
@@ -52,6 +56,7 @@
 /* Footer Styles */
 .footer {
     background-color: #f8f9fa;
+    margin-top: auto;
 }
 
 .footer h3, .footer p, .footer a {
@@ -185,6 +190,29 @@
 .fas.fa-seedling {
     color: green;
     margin-right: 5px;
+}
+
+/* Login Page */
+
+#logincard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: rgb(49, 165, 49);
+    border-color: rgb(58, 58, 58);
 }
 
 /* Media Queries */
