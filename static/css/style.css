@@ -258,6 +258,15 @@ form {
     min-height: 75vh;
 }
 
+/* Booking List Page */
+
+.form_container {
+    border: solid white 8px;
+    margin: 100px auto;
+    border-radius: 10px;
+    max-width: 75%;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 576px) {
     .underline-navbar::after {

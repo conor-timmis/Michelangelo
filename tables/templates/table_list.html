@@ -1,29 +1,52 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h2>Your Bookings</h2>
 
-{% if bookings %}
-<!-- View Bookings Layout -->
-<ul>
-    {% for booking in bookings %}
-    <li>
-        <h3>Booking for {{ booking.customer_name }}</h3>
-        <p>Special Occasion: {{ booking.special_occasion }}</p>
-        <p>Meal Day: {{ booking.meal_day }}</p>
-        <p>Meal Time: {{ booking.meal_time }}</p>
-        <p>Number of Guests: {{ booking.number_of_guests }}</p>
-        <form method="post" action="{% url 'delete_booking' %}">
-            {% csrf_token %}
-            <input type="hidden" name="booking_id" value="{{ booking.id }}">
-            <input type="submit" value="Delete">
-            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
-        </form>
-    </li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>You have no bookings.</p>
-{% endif %}
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<div class="booking-content">
+    <section class="form_create_booking_section">
+        <div class="container form_container">
+            <h2>Your Bookings</h2>
+
+            {% if bookings %}
+            <ul>
+                {% for booking in bookings %}
+                <li>
+                    <div class="row justify-content-center text-center form_row content-center">
+                        <div class="col-md-12 text-center">
+                            <h3>Booking for {{ booking.customer_name }}</h3>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p>Special Occasion: {{ booking.special_occasion }}</p>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p>Meal Day: {{ booking.meal_day }}</p>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p>Meal Time: {{ booking.meal_time }}</p>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p>Number of Guests: {{ booking.number_of_guests }}</p>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <form method="post" action="{% url 'delete_booking' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="booking_id" value="{{ booking.id }}">
+                                <input type="submit" value="Delete">
+                                <a href="{% url 'edit_booking' booking.id %}">Edit</a>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>You have no bookings.</p>
+            {% endif %}
+        </div>
+    </section>
+</div>
+
 <script src="{% static 'js/confirm.js' %}"></script>
 {% endblock %}
