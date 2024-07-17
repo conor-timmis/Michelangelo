@@ -259,12 +259,53 @@ form {
 }
 
 /* Booking List Page */
+.booking-content h2 {
+    margin-top: 30px;
+}
 
-.form_container {
-    border: solid white 8px;
-    margin: 100px auto;
-    border-radius: 10px;
-    max-width: 75%;
+.button-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.booking-item {
+    margin-bottom: 40px;
+    list-style-type: none;
+    
+}
+
+.button-form #deleteButton,
+.button-form #editButton {
+    margin-right: 10px;
+}
+
+.button-form #deleteButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button-form #editButton {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 /* Media Queries */
