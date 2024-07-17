@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <h2>Your Bookings</h2>
 
@@ -25,5 +25,5 @@
 {% else %}
 <p>You have no bookings.</p>
 {% endif %}
-
+<script src="{% static 'js/confirm.js' %}"></script>
 {% endblock %}
