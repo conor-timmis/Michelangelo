@@ -1,3 +1,3 @@
-$(document).ready(function() {
-    $('#id_meal_day').datepicker();
+jQuery(document).ready(function() {
+    jQuery('.datepicker').datepicker();
 });
