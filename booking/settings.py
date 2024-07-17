@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
+# Tells the entire app to find declared variables in env.py
 if os.path.isfile('env.py'):
     import env
 
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'tables',
 ]
 
+# Django settings for the site and redirection for authentication
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -107,6 +109,7 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-conortimmis-michelangel-7x7a0jxhhhi.ws-eu1
 #      }
 # }
 
+# Gets the DATABASE_URL from env.py file
 DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
@@ -146,6 +149,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# Tells the application where to find static files and sets an absolute path for the collectstatic directory,
+# also copying to the STATIC_ROOT directory
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = ('static',)

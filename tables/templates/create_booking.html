@@ -6,7 +6,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-
+<!-- Create Booking Form -->
 <section class="section-padding bg-dark text-white">
     <form method="post" action="{% url 'create_booking' %}">
         {% csrf_token %}
@@ -31,7 +31,7 @@
     </form>
 </section>
 
-
+<!-- Date Picker Script -->
 <script>
     $(document).ready(function() {
         $('#id_meal_day').datepicker();

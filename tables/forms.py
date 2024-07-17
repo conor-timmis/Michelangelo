@@ -4,12 +4,14 @@ from datetime import time, timedelta, datetime
 from .models import Booking
 from django.db import models
 
+# Define the form for a booking
 class BookingForm(forms.ModelForm):
     meal_day = forms.DateField(widget=forms.TextInput(attrs={'class': 'datepicker'}))
 
     MEAL_TIME_CHOICES = [(time(hour=h, minute=m).strftime('%H:%M'), time(hour=h, minute=m).strftime('%H:%M')) for h in range(14, 21) for m in range(0, 60, 15) if not (h == 20 and m > 0)]
     meal_time = forms.ChoiceField(choices=MEAL_TIME_CHOICES)
 
+    # Meta class for additional options
     class Meta:
         model = Booking
         fields = ['special_occasion', 'meal_day', 'meal_time', 'number_of_guests', 'customer_name']
@@ -17,6 +19,7 @@ class BookingForm(forms.ModelForm):
             models.UniqueConstraint(fields=['user', 'meal_day', 'meal_time', 'special_occasion'], name='unique_booking')
         ]
 
+    # This cleans the meal_time field
     def clean_meal_time(self):
         meal_time_str = self.cleaned_data.get('meal_time')
         if meal_time_str is not None:
@@ -24,6 +27,7 @@ class BookingForm(forms.ModelForm):
         else:
             return None
 
+    # Clean all fields
     def clean(self):
         cleaned_data = super().clean()
 

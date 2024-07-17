@@ -51,7 +51,7 @@ def delete_booking(request):
         messages.success(request, 'Booking deleted successfully!')
     return redirect('table_list')
 
-# To see booking lists
+# To view the booking list both as a standard user or all of them as superuser
 @login_required
 def booking_list(request):
     if request.user.is_superuser:
