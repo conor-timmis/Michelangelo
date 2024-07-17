@@ -11,6 +11,7 @@ body {
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100vh;
+    background-color: #f8f9fa;
 }
 
 /* Navbar Styles */
@@ -222,6 +223,39 @@ form {
 .login-form .btn-primary {
     background-color: rgb(49, 165, 49);
     border-color: rgb(58, 58, 58);
+}
+
+/* Create Booking Page */
+.section-padding {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+#id_special_occasion, #id_meal_day, #id_meal_time, #id_number_of_guests, #id_customer_name, #id_submit_button {
+    background-color: #333;
+    color: #fff; 
+    border: 1px solid #333; 
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px; 
+}
+
+.custom-margin-bottom {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cb-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 75vh;
 }
 
 /* Media Queries */

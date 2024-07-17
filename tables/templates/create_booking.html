@@ -5,10 +5,11 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <!-- Create Booking Form -->
-<section class="section-padding bg-dark text-white">
+<main class="cb-content">
+<section class="section-padding custom-margin-bottom d-flex align-items-center">
     <form method="post" action="{% url 'create_booking' %}">
         {% csrf_token %}
-        <h2>Create booking check</h2>
+        <h2>Create your booking here!</h2>
         <label for="id_special_occasion">Special Occasion:</label>
         {{ form.special_occasion }}
         <label for="id_meal_day">Meal Day:</label>
@@ -28,6 +29,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </section>
+</main>
 
 <!-- Date Picker Script -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
