@@ -1,50 +1,51 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- Signup Form -->
 <section class="account_signup">
-    <div class="container bg-dark form_container text-white">
-        <form method="post" action="{% url 'account_signup' %}">
-                    {% csrf_token %}
-                    <div class="row justify-content-center text-center form_row content-center">
-                        <div class="col-md-12 text-center">
-                            <h2>Register</h2>
-                        </div>
+    <div class="container form_container">
+        <form method="post" action="{% url 'account_signup' %}" class="form_style">
+            {% csrf_token %}
+            <div class="row justify-content-center text-center form_row content-center form_box">
+                <div class="col-md-12 text-center">
+                    <h2>Register</h2>
+                </div>
 
-                        <div class="col-md-12 text-center">
-                            <label for="id_username">Username:</label>
-                            {{ form.username }}
-                        </div>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <label for="id_email">Email:</label>
-                            {{ form.email }}
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <label for="id_password1">Password:</label>
-                            {{ form.password1 }}
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <label for="id_password2">Password Confirmation:</label>
-                            {{ form.password2 }}
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <ul class="list-unstyled text-decoration-none text-white">
-                                <li>Your password cannot be too similar to your other personal information.</li>
-                                <li>Your password must contain at least 8 characters.</li>
-                                <li>Your password cannot be a commonly used password.</li>
-                                <li>Your password cannot be entirely numeric.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light" data-mdb-ripple-color="dark">Submit</button>
-                        </div>
+                <div class="col-md-12 text-center">
+                    <label for="id_username">Username:</label>
+                    {{ form.username }}
+                </div>
+                <div class="col-md-12 text-center">
+                    <label for="id_email">Email:</label>
+                    {{ form.email }}
+                </div>
+                <div class="col-md-12 text-center">
+                    <label for="id_password1">Password:</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="col-md-12 text-center">
+                    <label for="id_password2">Confirm Password:</label>
+                    {{ form.password2 }}
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-info" onclick="toggleInfoList()">Need Help?</button>
+                    <div id="infoList" style="display: none;">
+                        <ul class="list-unstyled">
+                            <li>Your password cannot be too similar to your other personal information.</li>
+                            <li>Your password must contain at least 8 characters.</li>
+                            <li>Your password cannot be a commonly used password.</li>
+                            <li>Your password cannot be entirely numeric.</li>
+                        </ul>
                     </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                </div>
+            </div>
         </form>
     </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="{% static 'js/signuplist.js' %}"></script>
 {% endblock %}
