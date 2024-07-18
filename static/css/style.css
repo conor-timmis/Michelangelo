@@ -105,6 +105,18 @@ body {
     color: black;
 }
 
+.about {
+    margin-bottom: 50px;
+}
+
+.reviews {
+    margin-bottom: 50px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
 .section-padding {
     padding: 50px 0;
 }
