@@ -3,6 +3,8 @@ from django import forms
 from datetime import time, timedelta, datetime
 from .models import Booking
 from django.db import models
+from django.utils import timezone
+from zoneinfo import ZoneInfo
 
 # Define the form for a booking
 class BookingForm(forms.ModelForm):
@@ -30,6 +32,19 @@ class BookingForm(forms.ModelForm):
     # Clean all fields
     def clean(self):
         cleaned_data = super().clean()
+
+        meal_day = cleaned_data.get('meal_day')
+        meal_time = cleaned_data.get('meal_time')
+
+        # Use of my personal time zone to stop the booking of tables before the current time (in the United Kingdom)
+        restaurant_tz = ZoneInfo('Europe/London')
+        now = datetime.now(restaurant_tz)
+        now = now.replace(second=0, microsecond=0)
+
+        meal_datetime = datetime.combine(meal_day, meal_time, tzinfo=restaurant_tz)
+
+        if meal_datetime < now:
+            raise ValidationError("The booking datetime cannot be in the past!")
 
         try:
             self.instance.clean()
