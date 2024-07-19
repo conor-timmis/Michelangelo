@@ -44,6 +44,12 @@
             {% else %}
             <p>You have no bookings.</p>
             {% endif %}
+            <h2>Want to leave a review?</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ review_form.as_p }}
+                <button type="submit">Submit review</button>
+            </form>
         </div>
     </section>
 </div>

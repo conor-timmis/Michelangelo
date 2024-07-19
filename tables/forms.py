@@ -5,6 +5,7 @@ from .models import Booking
 from django.db import models
 from django.utils import timezone
 from zoneinfo import ZoneInfo
+from .models import Review
 
 # Define the form for a booking
 class BookingForm(forms.ModelForm):
@@ -54,3 +55,8 @@ class BookingForm(forms.ModelForm):
                 self.fields['meal_time'].widget.attrs.update({'class': 'meal-time taken'})
 
         return cleaned_data
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comment'] 

@@ -5,6 +5,7 @@ from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 from django.db import IntegrityError
+from .forms import ReviewForm
 
 # Create your views here.
 
@@ -58,4 +59,16 @@ def booking_list(request):
         bookings = Booking.objects.all()  
     else:
         bookings = Booking.objects.filter(user=request.user)
-    return render(request, 'table_list.html', {'bookings': bookings})
+
+    # How the review form is being handled
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.save()
+            return redirect('booking_list')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'table_list.html', {'form': form, 'bookings': bookings})
