@@ -62,13 +62,18 @@ def booking_list(request):
 
     # How the review form is being handled
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST, user=request.user)
         if form.is_valid():
             review = form.save(commit=False)
             review.user = request.user
             review.save()
-            return redirect('booking_list')
+            return redirect('table_list')
+        else:
+            messages.error(request, 'There was an error with your submission.')
     else:
-        form = ReviewForm()
+        form = ReviewForm(user=request.user)
 
-    return render(request, 'table_list.html', {'form': form, 'bookings': bookings})
+    reviews = Review.objects.all()
+
+    return render(request, 'table_list.html', {'form': form, 'bookings': bookings, 'reviews': reviews})
+

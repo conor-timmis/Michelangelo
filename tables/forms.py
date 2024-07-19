@@ -57,6 +57,13 @@ class BookingForm(forms.ModelForm):
         return cleaned_data
 
 class ReviewForm(forms.ModelForm):
+    booking = forms.ModelChoiceField(queryset=Booking.objects.none())
+
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user')
+        super(ReviewForm, self).__init__(*args, **kwargs)
+        self.fields['booking'].queryset = Booking.objects.filter(user=user)
+
     class Meta:
         model = Review
-        fields = ['rating', 'comment'] 
+        fields = ['booking', 'rating', 'comment']

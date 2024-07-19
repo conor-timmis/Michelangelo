@@ -47,9 +47,9 @@
             <h2>Want to leave a review?</h2>
             <form method="post">
                 {% csrf_token %}
-                {{ review_form.as_p }}
+                {{ form.as_p }}
                 <button type="submit">Submit review</button>
-            </form>
+            </form>        
         </div>
     </section>
 </div>
