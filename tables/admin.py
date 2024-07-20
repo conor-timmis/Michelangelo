@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Booking
+from .models import Booking, Review
 from .forms import BookingForm
 
 # Register your models here.
@@ -10,4 +10,10 @@ class BookingAdmin(admin.ModelAdmin):
     search_fields = ('customer_name',)
     list_filter = ('meal_day',)
 
-admin.site.register(Booking)
+admin.site.register(Booking, BookingAdmin)
+
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('user', 'booking', 'rating', 'created_at')
+    search_fields = ('user__username', 'booking__name', 'comment')
+
+admin.site.register(Review, ReviewAdmin)
