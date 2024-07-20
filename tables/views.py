@@ -6,6 +6,7 @@ from .models import Booking
 from .forms import BookingForm
 from django.db import IntegrityError
 from .forms import ReviewForm
+from .models import Review
 
 # Create your views here.
 
