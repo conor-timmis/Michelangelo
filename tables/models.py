@@ -2,6 +2,7 @@ from django import forms
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -29,7 +30,8 @@ class Booking(models.Model):
 # Class to structure the review process
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
-    booking = models.ForeignKey('Booking', on_delete=models.CASCADE, related_name='reviews')
-    rating = models.IntegerField()
+    booking = models.ForeignKey('Booking', on_delete=models.SET_NULL, null=True, related_name='reviews')
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
