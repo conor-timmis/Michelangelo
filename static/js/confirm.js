@@ -3,7 +3,7 @@ window.onload = function() {
     deleteButtons.forEach(function(button) {
         button.onclick = confirmDelete;
     });
-}
+};
 
 function confirmDelete() {
     return confirm("Are you sure you want to delete this booking?");

@@ -5,4 +5,4 @@ window.toggleInfoList = function() {
     } else {
         infoList.style.display = "none";
     }
-}
+};
