@@ -10,6 +10,7 @@ from .models import Review
 
 # Create your views here.
 
+
 # To create a booking
 @login_required
 def create_booking(request):
@@ -29,6 +30,7 @@ def create_booking(request):
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
 
+
 # To edit a booking
 @login_required
 def edit_booking(request, booking_id):
@@ -43,6 +45,7 @@ def edit_booking(request, booking_id):
         form = BookingForm(instance=booking)
     return render(request, 'edit_booking.html', {'form': form})
 
+
 # To delete a booking
 @login_required
 def delete_booking(request):
@@ -53,11 +56,12 @@ def delete_booking(request):
         messages.success(request, 'Booking deleted successfully!')
     return redirect('table_list')
 
+
 # To view the booking list both as a standard user or all of them as superuser
 @login_required
 def booking_list(request):
     if request.user.is_superuser:
-        bookings = Booking.objects.all()  
+        bookings = Booking.objects.all()
     else:
         bookings = Booking.objects.filter(user=request.user)
 
@@ -76,5 +80,6 @@ def booking_list(request):
 
     reviews = Review.objects.all()
 
-    return render(request, 'table_list.html', {'form': form, 'bookings': bookings, 'reviews': reviews})
-
+    return render(request, 'table_list.html', {
+        'form': form, 'bookings': bookings, 'reviews': reviews
+    })

@@ -6,6 +6,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
+
 # Represents a booking made by a user and indicates if the table is booked.
 class Booking(models.Model):
     SPECIAL_OCCASIONS = (
@@ -13,8 +14,12 @@ class Booking(models.Model):
         ('Anv.', 'Anniversary'),
         ('Other', 'Other'),
     )
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
-    special_occasion = models.CharField(max_length=20, choices=SPECIAL_OCCASIONS)
+    user = models.ForeignKey(
+            settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True
+        )
+    special_occasion = models.CharField(
+        max_length=20, choices=SPECIAL_OCCASIONS
+            )
     meal_day = models.DateField()
     meal_time = models.TimeField()
     number_of_guests = models.IntegerField()
@@ -24,14 +29,23 @@ class Booking(models.Model):
     # Meta class to set (with constraints) how to register a booking.
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'meal_day', 'meal_time', 'special_occasion'], name='unique_booking')
-        ]
+            models.UniqueConstraint(fields=[
+                'user', 'meal_day', 'meal_time', 'special_occasion'],
+                name='unique_booking'
+                    )
+            ]
+
 
 # Class to structure the review process
 class Review(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
-    booking = models.ForeignKey('Booking', on_delete=models.SET_NULL, null=True, related_name='reviews')
-    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='reviews'
+        )
+    booking = models.ForeignKey(
+        'Booking', on_delete=models.SET_NULL, null=True, related_name='reviews'
+            )
+    rating = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)]
+            )
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-
