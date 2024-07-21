@@ -111,8 +111,16 @@ CSRF_TRUSTED_ORIGINS = ['https://8000-conortimmis-michelangel-7x7a0jxhhhi.ws-eu1
 
 # Gets the DATABASE_URL from env.py file
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+import sys
+
+if 'test' in sys.argv:
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.sqlite3',
+    }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
