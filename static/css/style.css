@@ -94,7 +94,6 @@ body {
 }
 
 /* Index Styles */
-
 .carousel-item img {
     max-height: 750px;
     width: auto;
@@ -127,10 +126,9 @@ body {
 }
 
 /* Menu Styles */
-
 #menu {
     background-color: #7ebfbb;
-    color: #fff;
+    color: #2c2c2c;
 }
 
 .section-padding {
@@ -175,11 +173,11 @@ body {
 }
 
 .section-title-menu h4 {
-    color: #fff;
+    color: #2c2c2c;
 }
 
 .menu .menu-dishes span {
-    color: #fff;
+    color: #2c2c2c;
 }
 
 
@@ -188,7 +186,7 @@ body {
     z-index: 3;
     padding: 0 10px;
     font-weight: 600;
-    color: #fff;
+    color: #2c2c2c;
 }
   
 .menu .menu-desc {
@@ -196,7 +194,7 @@ body {
     font-style: italic;
     font-size: 14px;
     font-family: "Inter", sans-serif;
-    color: rgba(255, 255, 255, 0.5);
+    color: #2c2c2c;
 }
 
 .fas.fa-leaf {
@@ -210,7 +208,6 @@ body {
 }
 
 /* Login Page */
-
 #logincard {
     display: flex;
     flex-direction: column;
