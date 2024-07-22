@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+{% endblock %}
 {% block content %}
 
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <!-- Create Booking Form -->
 <main class="cb-content">
@@ -31,8 +33,21 @@
 </section>
 </main>
 
+{% endblock %}
+
+{% block js %}
 <!-- Date Picker Script -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="{% static 'js/datepicker.js' %}"></script>
+<script>
+    // Ensure meal_day is on/after today
+    let today = new Date().toISOString().split("T")[0];
+    $("#id_meal_day").prop("min", today);
+    $("#id_meal_day").datepicker({
+        dateFormat: "yy-mm-dd",
+        minDate: 0
+    }).on("focus", function() {
+        $(this).datepicker("show");
+    });
+</script>
 {% endblock %}

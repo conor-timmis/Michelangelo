@@ -9,9 +9,7 @@ from .models import Booking, Review
 
 # Define the form for a booking
 class BookingForm(forms.ModelForm):
-    meal_day = forms.DateField(
-        widget=forms.TextInput(attrs={'class': 'datepicker'})
-    )
+
 
     MEAL_TIME_CHOICES = [
         (
@@ -27,6 +25,7 @@ class BookingForm(forms.ModelForm):
     # Meta class for additional options
     class Meta:
         model = Booking
+        widgets = {'meal_day': forms.DateInput(attrs={'class': 'datepicker'})}
         fields = [
             'special_occasion', 'meal_day', 'meal_time',
             'number_of_guests', 'customer_name'
@@ -52,6 +51,11 @@ class BookingForm(forms.ModelForm):
 
         meal_day = cleaned_data.get('meal_day')
         meal_time = cleaned_data.get('meal_time')
+
+        # If either meal_day or meal_time is None, return early
+        if meal_day is None or meal_time is None:
+            return cleaned_data
+
         # Use of my personal time zone to stop the booking of tables
         # before the current time (in the United Kingdom)
         restaurant_tz = ZoneInfo('Europe/London')
@@ -60,12 +64,12 @@ class BookingForm(forms.ModelForm):
 
         meal_datetime = datetime.combine(
             meal_day, meal_time, tzinfo=restaurant_tz
-            )
+        )
 
         if meal_datetime < now:
             raise ValidationError(
                 "The booking date or time cannot be in the past!"
-                )
+            )
 
         try:
             self.instance.clean()

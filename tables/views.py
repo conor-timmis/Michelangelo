@@ -48,12 +48,10 @@ def edit_booking(request, booking_id):
 
 # To delete a booking
 @login_required
-def delete_booking(request):
-    if request.method == 'POST':
-        booking_id = request.POST.get('booking_id')
-        booking = get_object_or_404(Booking, id=booking_id, user=request.user)
-        booking.delete()
-        messages.success(request, 'Booking deleted successfully!')
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    booking.delete()
+    messages.success(request, 'Booking deleted successfully!')
     return redirect('table_list')
 
 
