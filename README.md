@@ -454,3 +454,6 @@ You can fork this repository by using the following steps:
 ### Local VS Deployment
 
 I have not noticed any differences between local (Gitpod) to the deployed version on Heroku during the time of the development.
+
+
+## Credits
