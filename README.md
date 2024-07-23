@@ -483,3 +483,12 @@ I have not noticed any differences between local (Gitpod) to the deployed versio
 | --- | --- | --- | --- |
 | [Michelangelo](https://il-michelangelo.com/) | home | image | favicon and images on the home page are taken from the original restaurant site to get a more accurate depiction |
 | [iStockPhoto](https://www.istockphoto.com/photos/default-profile-image) | home page | image | used as a default profile picture for review/profile purposes |
+
+
+### Acknowledgements
+
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank my friend [Tommy Holt](https://github.com/atTommy98) for helping me with a few issues when I was first starting the development of Michelangelo.
