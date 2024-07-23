@@ -64,3 +64,77 @@ I used [coolors.co](https://coolors.co/f8f9fa-343a40) to generate my colour pale
 - As a site administrator, I should be able to handle user complaints and issues, so that I can maintain user satisfaction.
 - As a site administrator, I should be able to update site features and content, so that I can keep the platform relevant and user-friendly.
 - As a site administrator, I should be able to analyze site usage data, so that I can make informed decisions about future updates and improvements.
+
+
+## Wireframes
+
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Wireframe](https://wireframe.cc/) to design my site wireframes.
+
+### Mobile Wireframes
+
+< details >
+< summary > Click here to see the Mobile Wireframes < / summary >
+
+Home
+  - ![screenshot](documentation/wireframes/mobile-home.png)
+
+Menu
+  - ![screenshot](documentation/wireframes/mobile-menu.png)
+
+Login
+  - ![screenshot](documentation/wireframes/mobile-login.png)
+
+Create Booking
+  - ![screenshot](documentation/wireframes/mobile-createbooking.png)
+
+View Booking
+  - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
+
+
+< / details >
+
+### Tablet Wireframes
+
+< details >
+< summary > Click here to see the Tablet Wireframes < / summary >
+
+Home
+  - ![screenshot](documentation/wireframes/tablet-home.png)
+
+Menu
+  - ![screenshot](documentation/wireframes/tablet-menu.png)
+
+Login
+  - ![screenshot](documentation/wireframes/tablet-login.png)
+
+Create Booking
+  - ![screenshot](documentation/wireframes/tablet-createbooking.png)
+
+View Booking
+  - ![screenshot](documentation/wireframes/tablet-viewbooking.png)
+
+< / details >
+
+### Desktop Wireframes
+
+< details >
+< summary > Click here to see the Desktop Wireframes < / summary >
+
+Home
+  - ![screenshot](documentation/wireframes/desktop-home.png)
+
+Menu
+  - ![screenshot](documentation/wireframes/desktop-menu.png)
+
+Login
+  - ![screenshot](documentation/wireframes/desktop-login.png)
+
+Create Booking
+  - ![screenshot](documentation/wireframes/desktop-createbooking.png)
+
+View Booking
+  - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
+
+< / details >
