@@ -232,3 +232,30 @@ View Booking
 - [![Wireframe](https://img.shields.io/badge/Wireframe-grey?logo=barmenia&logoColor=CE0908)](https://wireframe.cc) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 
+
+## Database Design
+
+```python
+class Booking(models.Model):
+    SPECIAL_OCCASIONS = (
+        ('Bday', 'Birthday'),
+        ('Anv.', 'Anniversary'),
+        ('Other', 'Other'),
+    )
+    user = models.ForeignKey(
+            settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True
+        )
+    special_occasion = models.CharField(
+        max_length=20, choices=SPECIAL_OCCASIONS
+            )
+    meal_day = models.DateField()
+    meal_time = models.TimeField()
+    number_of_guests = models.IntegerField()
+    customer_name = models.CharField(max_length=100)
+    is booked = models.BooleanField(default=False)
+```
+
+![screenshot](documentation/example-erd.png)
+
+![erd](documentation/erd.png)
+source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
