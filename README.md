@@ -259,3 +259,15 @@ class Booking(models.Model):
 
 ![erd](documentation/erd.png)
 source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
+
+
+## Agile Development Process
+
+### GitHub Projects
+
+[GitHub Projects](https://github.com/conor-timmis/Michelangelo/projects) served as an Agile tool for this project.
+It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
+
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+![screenshot](documentation/gh-projects.png)
