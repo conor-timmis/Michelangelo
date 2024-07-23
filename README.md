@@ -305,3 +305,20 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 
 The live deployed application can be found deployed on [Heroku](https://michelangelo-e4d1cac07cf7.herokuapp.com)
 
+
+### PostgreSQL Database
+
+This project uses a [Code Institute PostgreSQL Database](https://dbs.ci-dbs.net).
+
+To obtain my own Postgres Database from Code Institute, I followed these steps:
+
+- Signed-in to the CI LMS using my email address.
+- An email was sent to me with my new Postgres Database.
+
+> [!CAUTION]  
+> - PostgreSQL databases by Code Institute are only available to CI Students.
+> - You must acquire your own PostgreSQL database through some other method
+> if you plan to clone/fork this repository.
+> - Code Institute students are allowed a maximum of 8 databases.
+> - Databases are subject to deletion after 18 months.
+
