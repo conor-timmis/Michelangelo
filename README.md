@@ -145,6 +145,8 @@ View Booking
 
 ### Existing Features
 
+<details>
+<Summary>Show Existing Features</Summary>
 
 - **Navbar**
 
@@ -193,3 +195,17 @@ View Booking
     - The view bookings page houses the functionality of editing and deleting your bookings, you can also make a review on a booking you have made before you have deleted the booking here to appear on the front page.
 
 ![screenshot](documentation/features/viewbooking.png)
+
+</details>
+
+
+## Future Features
+
+- **User Profile**
+    - A dedicated profile page for each user where they can update their personal information, view their booking history, and manage their reviews.
+
+- **Loyalty Program**
+    - Implement a loyalty program where users can earn points for each booking or order, which can be redeemed for discounts or free items.
+
+- **Interactive Menu**
+    - An interactive menu where users can filter dishes based on dietary preferences or ingredients.
