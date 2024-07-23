@@ -476,3 +476,10 @@ I have not noticed any differences between local (Gitpod) to the deployed versio
 | [StackOverflow](https://stackoverflow.com/questions/74699339/django-crud-functionality-edit-profile-details) | for booking pages | helped with structuring my meta classes and CRUD functionality
 | [StackOverflow](https://stackoverflow.com/questions/71163476/processing-a-django-form) | template structure | for structuring the forms to be placed into html templates with django's templating tags
 | [Bootstrap](https://getbootstrap.com/) | entire website | very much helped with responsiveness and way more modern design than I am used to so far
+
+
+### Media
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [Michelangelo](https://il-michelangelo.com/) | home | image | favicon and images on the home page are taken from the original restaurant site to get a more accurate depiction |
+| [iStockPhoto](https://www.istockphoto.com/photos/default-profile-image) | home page | image | used as a default profile picture for review/profile purposes |
