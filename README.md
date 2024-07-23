@@ -150,7 +150,7 @@ View Booking
 
 - **Navbar**
 
-    - The Navbar houses all the direction within the website, between the homepage, menu, login, register pages and even opted to make a button to make a button to catch the eye.
+    - The Navbar houses all the direction within the website, between the homepage, menu, login, register pages and even opted to make a button to catch the eye.
 
 ![screenshot](documentation/features/navbar.png)
 
@@ -286,7 +286,7 @@ It also helped with milestone iterations on a weekly basis.
 ### MoSCoW Prioritization
 
 I've decomposed my Epics into stories prior to prioritizing and implementing them.
-Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
+Using this approach, I was able to apply the MoSCoW prioritization and labels to my user stories within the Issues tab.
 
 - **Must Have**: guaranteed to be delivered (*max 60% of stories*)
 - **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
