@@ -10,7 +10,6 @@ from .models import Booking, Review
 # Define the form for a booking
 class BookingForm(forms.ModelForm):
 
-
     MEAL_TIME_CHOICES = [
         (
             time(hour=h, minute=m).strftime('%H:%M'),
