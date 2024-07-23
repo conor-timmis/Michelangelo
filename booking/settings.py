@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
-import cloudinary
 # Tells the entire app to find declared variables in env.py
 if os.path.isfile('env.py'):
     import env
@@ -36,13 +35,6 @@ ALLOWED_HOSTS = []
 host = os.environ.get("ALLOWED_HOSTS")
 if host:
     ALLOWED_HOSTS.append(host)
-
-# Cloudinary Setup
-cloudinary.config( 
-  cloud_name = os.getenv('CLOUD_NAME'), 
-  api_key = os.getenv('API_KEY'), 
-  api_secret = os.getenv('API_SECRET') 
-)
 
 # Application definition
 
