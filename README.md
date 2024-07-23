@@ -138,3 +138,58 @@ View Booking
   - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
 
 </details>
+
+
+## Features
+
+
+### Existing Features
+
+
+- **Navbar**
+
+    - The Navbar houses all the direction within the website, between the homepage, menu, login, register pages and even opted to make a button to make a button to catch the eye.
+
+![screenshot](documentation/features/navbar.png)
+
+- **Carousel**
+
+    - The carousel houses some featured images we wanted to put on display for people visiting the page, to see the view of the restaurant and a couple of the dishes, this boasts a scrolling arrow and underneath has a display of how many more images are in the carousel.
+
+![screenshot](documentation/features/carousel.png)
+
+- **Reviews**
+
+    - The review section actually posts from the view bookings page for when you want to review one of your bookings, I have made it so you can appear on the front page if you're one of the latest 3 reviews on the site.
+
+![screenshot](documentation/features/reviews.png)
+
+- **Footer**
+
+    - The footer houses the location of the restaurant and social icons for people to follow us on social media.
+
+![screenshot](documentation/features/footer.png)
+
+- **Register Form**
+
+    - The register form is how you will create your account and identify on the website.
+
+![screenshot](documentation/features/register.png)
+
+- **Login Form**
+
+    - The login form will log you in with your own credentials so you can identify and interact with the website.
+
+![screenshot](documentation/features/login.png)
+
+- **Create Booking**
+
+    - The create booking form allows you to create your booking with certain requirements beforehand so we can know what to expect before you arrive.
+
+![screenshot](documentation/features/createbooking.png)
+
+- **View Bookings Page**
+
+    - The view bookings page houses the functionality of editing and deleting your bookings, you can also make a review on a booking you have made before you have deleted the booking here to appear on the front page.
+
+![screenshot](documentation/features/viewbooking.png)
