@@ -449,3 +449,8 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/conor-timmis/Michelangelo)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+
+### Local VS Deployment
+
+I have not noticed any differences between local (Gitpod) to the deployed version on Heroku during the time of the development.
