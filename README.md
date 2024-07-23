@@ -30,3 +30,9 @@ I used [coolors.co](https://coolors.co/f8f9fa-343a40) to generate my colour pale
 
 ![screenshot](documentation/coolors.png)
 
+
+### Typography
+
+- [Inter](https://fonts.google.com/specimen/Inter) was used throughout the entire website with no secondary fonts.
+
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, I used Font Awesome for my social icons and menu icons to display Vegan and Vegetarian dishes.
