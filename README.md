@@ -74,8 +74,8 @@ I've used [Wireframe](https://wireframe.cc/) to design my site wireframes.
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
 
 Home
   - ![screenshot](documentation/wireframes/mobile-home.png)
@@ -93,12 +93,12 @@ View Booking
   - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
 
 
-< / details >
+</details>
 
 ### Tablet Wireframes
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
   - ![screenshot](documentation/wireframes/tablet-home.png)
@@ -115,12 +115,12 @@ Create Booking
 View Booking
   - ![screenshot](documentation/wireframes/tablet-viewbooking.png)
 
-< / details >
+</details>
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary>Click here to see the Desktop Wireframes</summary>
 
 Home
   - ![screenshot](documentation/wireframes/desktop-home.png)
@@ -137,4 +137,4 @@ Create Booking
 View Booking
   - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
 
-< / details >
+</details>
