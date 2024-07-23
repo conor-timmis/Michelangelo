@@ -271,3 +271,13 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
 ![screenshot](documentation/gh-projects.png)
+
+
+### GitHub Issues
+
+[GitHub Issues](https://github.com/conor-timmis/Michelangelo/issues) served as an another Agile tool.
+There, I used my own **User Story Template** to manage user stories.
+
+It also helped with milestone iterations on a weekly basis.
+
+![screenshot](documentation/gh-issues-closed.png)
