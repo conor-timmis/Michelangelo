@@ -289,34 +289,6 @@ form {
     margin-right: 10px;
 }
 
-.button-form #deleteButton {
-    background-color: rgb(233, 79, 79);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button-form #editButton {
-    background-color: rgb(78, 78, 224);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
 textarea {
     resize: none;
     height: 100px;
