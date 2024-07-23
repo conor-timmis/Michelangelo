@@ -36,3 +36,105 @@ I used [coolors.co](https://coolors.co/f8f9fa-343a40) to generate my colour pale
 - [Inter](https://fonts.google.com/specimen/Inter) was used throughout the entire website with no secondary fonts.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, I used Font Awesome for my social icons and menu icons to display Vegan and Vegetarian dishes.
+
+
+## User Stories
+
+
+### New Site Users
+
+- As a new site user, I would like to access the menu, so that I can make a decision with registering and booking.
+- As a new site user, I would like to register to the site, so that I can make bookings.
+- As a new site user, I would like to be able to login, so that I can keep track of my bookings.
+- As a new site user, I would like to be able to edit my bookings, so that I can change them if I wish.
+- As a new site user, I would like to delete my bookings, so that I can create one at a later date or cancel.
+
+### Returning Site Users
+
+- As a returning site user, I would like to view my past bookings, so that I can keep track of my visit history.
+- As a returning site user, I would like to receive notifications about upcoming bookings, so that I can be prepared for my travels.
+- As a returning site user, I would like to save my favorite dishes, so that I can easily book them in the future.
+- As a returning site user, I would like to leave reviews for my past bookings, so that I can share my experiences with other users.
+- As a returning site user, I would like to update my profile information, so that I can have my profile personalised with Michelangelo.
+
+### Site Admin
+
+- As a site administrator, I should be able to monitor user activity, so that I can ensure the platform is being used appropriately.
+- As a site administrator, I should be able to manage the listings, so that I can maintain the quality and accuracy of the site content.
+- As a site administrator, I should be able to handle user complaints and issues, so that I can maintain user satisfaction.
+- As a site administrator, I should be able to update site features and content, so that I can keep the platform relevant and user-friendly.
+- As a site administrator, I should be able to analyze site usage data, so that I can make informed decisions about future updates and improvements.
+
+
+## Wireframes
+
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Wireframe](https://wireframe.cc/) to design my site wireframes.
+
+### Mobile Wireframes
+
+< details >
+< summary > Click here to see the Mobile Wireframes < / summary >
+
+Home
+  - ![screenshot](documentation/wireframes/mobile-home.png)
+
+Menu
+  - ![screenshot](documentation/wireframes/mobile-menu.png)
+
+Login
+  - ![screenshot](documentation/wireframes/mobile-login.png)
+
+Create Booking
+  - ![screenshot](documentation/wireframes/mobile-createbooking.png)
+
+View Booking
+  - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
+
+
+< / details >
+
+### Tablet Wireframes
+
+< details >
+< summary > Click here to see the Tablet Wireframes < / summary >
+
+Home
+  - ![screenshot](documentation/wireframes/tablet-home.png)
+
+Menu
+  - ![screenshot](documentation/wireframes/tablet-menu.png)
+
+Login
+  - ![screenshot](documentation/wireframes/tablet-login.png)
+
+Create Booking
+  - ![screenshot](documentation/wireframes/tablet-createbooking.png)
+
+View Booking
+  - ![screenshot](documentation/wireframes/tablet-viewbooking.png)
+
+< / details >
+
+### Desktop Wireframes
+
+< details >
+< summary > Click here to see the Desktop Wireframes < / summary >
+
+Home
+  - ![screenshot](documentation/wireframes/desktop-home.png)
+
+Menu
+  - ![screenshot](documentation/wireframes/desktop-menu.png)
+
+Login
+  - ![screenshot](documentation/wireframes/desktop-login.png)
+
+Create Booking
+  - ![screenshot](documentation/wireframes/desktop-createbooking.png)
+
+View Booking
+  - ![screenshot](documentation/wireframes/mobile-viewbooking.png)
+
+< / details >
