@@ -26,3 +26,12 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
 | static | style.css | ![screenshot](documentation/validation/styles.png) | Shows 1 warning of possible imported stylesheets (bootstrap for example in this case) |
+
+
+### JavaScript
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| Directory | File | Screenshot | Notes |
+| --- | --- | --- | --- |
+| static | signuplist.js | ![screenshot](documentation/validation/signuplist.png) | No errors or warnings found |
