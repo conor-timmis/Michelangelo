@@ -48,10 +48,6 @@ body {
     border: 1px solid #333; 
 }
 
-.form_container {
-    border: solid white 8px;
-}
-
 .error_message_notes {
     background-color: #333;
     color: #fff;
@@ -298,7 +294,9 @@ form {
 .booking-item {
     margin-bottom: 40px;
     list-style-type: none;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-form #deleteButton,
