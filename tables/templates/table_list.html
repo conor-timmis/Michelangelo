@@ -13,7 +13,7 @@
             <ul class="list-unstyled">
                 {% for booking in bookings %}
                 <li class="booking-item">
-                    <div class="row justify-content-center">
+                    <div class="container form_container text-center">
                         <div class="col-md-12">
                             <h3>Booking for {{ booking.customer_name }}</h3>
                             <p>Special Occasion: {{ booking.special_occasion }}</p>
@@ -21,12 +21,12 @@
                             <p>Meal Time: {{ booking.meal_time }}</p>
                             <p>Number of Guests: {{ booking.number_of_guests }}</p>
                             <a href="{% url 'edit_booking' booking.id %}" id="editButton" class="btn btn-primary">Edit</a>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>                   
-                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{booking.id}}">Delete</button>                   
+                            <div class="modal fade" id="deleteModal{{booking.id}}" tabindex="-1" aria-labelledby="deleteModalLabel{{booking.id}}" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                                            <h5 class="modal-title" id="deleteModalLabel{{booking.id}}">Confirm Delete</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -39,7 +39,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>   
                         </div>   
                     </div>
                 </li>
