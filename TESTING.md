@@ -113,3 +113,19 @@ Defensive programming was manually tested with the below user acceptance testing
 | Login | Login is expected to do nothing when the user does not input | Tested the feature by typing nothing into the form | The feature responded by prompting me with my login | Test concluded and passed | ![screenshot](documentation/features/test-login.png) |
 | Logged in Pages | Block logged out user from accessing authenticated pages | Try a URL for a page that is for authenticated users | When entering the booking view page, it takes the user to the login screen | Test concluded and passed | ![screenshot](documentation/features/test-urls.png) |
 | Booking | Booking is expected to post the booking in the future | Try to create a booking in the past | The feature behaved as expected, with the datepicker not allowing days in the past as well as not allowing a booking of time before current  | Test concluded and passed | ![screenshot](documentation/features/test-booking.png) |
+
+
+## User Story Testing
+
+
+| User Story | Screenshot |
+| --- | --- |
+| As a new site user, I would like to register for an account, so that I can make a reservation. | ![screenshot](documentation/features/register.png) |
+| As a new site user, I would like to log into the website, so that I can create bookings and review. | ![screenshot](documentation/features/login.png) |
+| As a new site user, I would like to create bookings, so that I can visit and enjoy some tasty food. | ![screenshot](documentation/features/createbooking.png) |
+| As a returning site user, I would like to view my past bookings, so that I can keep track of my visit history. | ![screenshot](documentation/features/viewbooking.png) |
+| As a returning site user, I would like to leave a review for a dish I tried, so that I can share my experience with other users. | ![screenshot](documentation/features/viewbooking.png) |
+| As a new site user, I would like the option to delete or edit my bookings, so that I can create one at a later date or cancel if I wish to. | ![screenshot](documentation/features/viewbooking.png) |
+| As a site administrator, I should be able to manage reservations, so that I can keep track of the restaurant’s bookings. | ![screenshot](documentation/features/admin-delete.png) |
+| As a site administrator, I should be able to manage reviews, so that I can make sure the reviews are genuine and to keep the site clean. | ![screenshot](documentation/features/admin-review.png) |
+| As a site administrator, I should be able to manage users accounts, so that I can change details for them if they so wish. | ![screenshot](documentation/features/admin-accounts.png) |

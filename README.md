@@ -60,7 +60,7 @@ I used [coolors.co](https://coolors.co/f8f9fa-343a40) to generate my colour pale
 ### Site Admin
 
 - As a site administrator, I should be able to monitor user activity, so that I can ensure the platform is being used appropriately.
-- As a site administrator, I should be able to manage the listings, so that I can maintain the quality and accuracy of the site content.
+- As a site administrator, I should be able to manage the bookings and reviews, so that I can maintain the quality and accuracy of the site content.
 - As a site administrator, I should be able to handle user complaints and issues, so that I can maintain user satisfaction.
 - As a site administrator, I should be able to update site features and content, so that I can keep the platform relevant and user-friendly.
 - As a site administrator, I should be able to analyze site usage data, so that I can make informed decisions about future updates and improvements.
