@@ -71,3 +71,17 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/chrome-menu.png) | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/chrome-booking.png) | ![screenshot](documentation/browsers/chrome-view-booking.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/firefox-menu.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/firefox-booking.png) | ![screenshot](documentation/browsers/firefox-view-booking.png) | Works as expected (does not show even extension warnings that were showing in Arc) |
 | Arc | ![screenshot](documentation/browsers/arc-home.png) | ![screenshot](documentation/browsers/arc-menu.png) | ![screenshot](documentation/browsers/arc-login.png) | ![screenshot](documentation/browsers/arc-register.png) | ![screenshot](documentation/browsers/arc-booking.png) | ![screenshot](documentation/browsers/arc-view-booking.png) | Shows 5 warnings but after looking this up it all comes from an extension "uBlock Origin" I have installed |
+
+
+## Responsiveness
+
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Home | Menu | Login | Register | View Booking | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/mobile-menu.png) | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/mobile-booking.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/tablet-menu.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/tablet-booking.png) | Works as expected |
+| Desktop | ![screenshot](documentation/responsiveness/desktop-home.png) | ![screenshot](documentation/responsiveness/desktop-menu.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | ![screenshot](documentation/responsiveness/desktop-booking.png) | Works as expected |
+| XL Monitor | ![screenshot](documentation/responsiveness/xl-home.png) | ![screenshot](documentation/responsiveness/xl-menu.png) | ![screenshot](documentation/responsiveness/xl-login.png) | ![screenshot](documentation/responsiveness/xl-register.png) | ![screenshot](documentation/responsiveness/xl-booking.png) | Works as expected |
+| 4K Monitor | ![screenshot](documentation/responsiveness/4k-home.png) | ![screenshot](documentation/responsiveness/4k-menu.png) | ![screenshot](documentation/responsiveness/4k-login.png) | ![screenshot](documentation/responsiveness/4k-register.png) | ![screenshot](documentation/responsiveness/4k-booking.png) | Works as expected |
