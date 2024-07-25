@@ -35,3 +35,27 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
 | static | signuplist.js | ![screenshot](documentation/validation/signuplist.png) | No errors or warnings found |
+
+
+### Python
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+| Directory | File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| booking | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/booking/settings.py) | ![screenshot](documentation/validation/settings.png) | Errors shown from lines included in the initial installation of Django |
+| booking | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/booking/urls.py) | ![screenshot](documentation/validation/booking-urls.png) | All clear, no errors found |
+| home | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/home/admin.py) | ![screenshot](documentation/validation/home-admin.png) | All clear, no errors found |
+| home | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/home/models.py) | ![screenshot](documentation/validation/home-models.png) | All clear, no errors found |
+| home | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/home/urls.py) | ![screenshot](documentation/validation/home-urls.png) | All clear, no errors found |
+| home | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/home/views.py) | ![screenshot](documentation/validation/home-views.png) | All clear, no errors found |
+| main | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/manage.py) | ![screenshot](documentation/validation/manage.png) | All clear, no errors found |
+| menu | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/menu/admin.py) | ![screenshot](documentation/validation/menu-admin.png) | All clear, no errors found |
+| menu | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/menu/models.py) | ![screenshot](documentation/validation/menu-models.png) | All clear, no errors found |
+| menu | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/menu/urls.py) | ![screenshot](documentation/validation/menu-urls.png) | All clear, no errors found |
+| menu | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/menu/views.py) | ![screenshot](documentation/validation/menu-views.png) | All clear, no errors found |
+| tables | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/admin.py) | ![screenshot](documentation/validation/tables-admin.png) | All clear, no errors found |
+| tables | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/forms.py) | ![screenshot](documentation/validation/tables-forms.png) | All clear, no errors found |
+| tables | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/models.py) | ![screenshot](documentation/validation/tables-models.png) | All clear, no errors found |
+| tables | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/urls.py) | ![screenshot](documentation/validation/tables-urls.png) | All clear, no errors found |
+| tables | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/views.py) | ![screenshot](documentation/validation/tables-views.png) | All clear, no errors found |
