@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
+import sys
 # Tells the entire app to find declared variables in env.py
 if os.path.isfile('env.py'):
     import env
@@ -96,7 +97,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'booking.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-conortimmis-michelangel-7x7a0jxhhhi.ws-eu115.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-conortimmis-michelangel-7x7a0jxhhhi.ws-eu115.gitpod.io']  # No QA
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -113,7 +114,6 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-import sys
 
 if 'test' in sys.argv:
     DATABASES['default'] = {
@@ -156,7 +156,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-# Tells the application where to find static files and sets an absolute path for the collectstatic directory,
+# Tells the application where to find static files and sets an
+# absolute path for the collectstatic directory,
 # also copying to the STATIC_ROOT directory
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
