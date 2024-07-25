@@ -100,3 +100,16 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) | Some minor warnings |
 | Booking | ![screenshot](documentation/lighthouse/mobile-booking.png) | ![screenshot](documentation/lighthouse/desktop-booking.png) | Some minor warnings |
 | View Booking | ![screenshot](documentation/lighthouse/mobile-view-booking.png) | ![screenshot](documentation/lighthouse/desktop-view-booking.png) | Some minor warnings |
+
+
+## Defensive Programming
+
+
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | Expectation | Test | Result | Fix | Screenshot |
+| --- | --- | --- | --- | --- | --- |
+| Signup | Register is expected to require all fields with password requirements | Leaving every form empty | The feature behaved as expected, and it expected me to fill in the form, once I clicked submit, the prompt to login shown up | Test concluded and passed | ![screenshot](documentation/features/test-register.png) |
+| Login | Login is expected to do nothing when the user does not input | Tested the feature by typing nothing into the form | The feature responded by prompting me with my login | Test concluded and passed | ![screenshot](documentation/features/test-login.png) |
+| Logged in Pages | Block logged out user from accessing authenticated pages | Try a URL for a page that is for authenticated users | When entering the booking view page, it takes the user to the login screen | Test concluded and passed | ![screenshot](documentation/features/test-urls.png) |
+| Booking | Booking is expected to post the booking in the future | Try to create a booking in the past | The feature behaved as expected, with the datepicker not allowing days in the past as well as not allowing a booking of time before current  | Test concluded and passed | ![screenshot](documentation/features/test-booking.png) |
