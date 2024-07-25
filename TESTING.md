@@ -59,3 +59,15 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | tables | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/models.py) | ![screenshot](documentation/validation/tables-models.png) | All clear, no errors found |
 | tables | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/urls.py) | ![screenshot](documentation/validation/tables-urls.png) | All clear, no errors found |
 | tables | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/conor-timmis/Michelangelo/main/tables/views.py) | ![screenshot](documentation/validation/tables-views.png) | All clear, no errors found |
+
+
+## Browser Compatibility
+
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Home | Menu | Login | Register | Booking | View Booking | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Chrome | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/chrome-menu.png) | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/chrome-booking.png) | ![screenshot](documentation/browsers/chrome-view-booking.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/firefox-menu.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/firefox-booking.png) | ![screenshot](documentation/browsers/firefox-view-booking.png) | Works as expected (does not show even extension warnings that were showing in Arc) |
+| Arc | ![screenshot](documentation/browsers/arc-home.png) | ![screenshot](documentation/browsers/arc-menu.png) | ![screenshot](documentation/browsers/arc-login.png) | ![screenshot](documentation/browsers/arc-register.png) | ![screenshot](documentation/browsers/arc-booking.png) | ![screenshot](documentation/browsers/arc-view-booking.png) | Shows 5 warnings but after looking this up it all comes from an extension "uBlock Origin" I have installed |
