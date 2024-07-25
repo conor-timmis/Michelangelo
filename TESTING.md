@@ -85,3 +85,18 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop | ![screenshot](documentation/responsiveness/desktop-home.png) | ![screenshot](documentation/responsiveness/desktop-menu.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | ![screenshot](documentation/responsiveness/desktop-booking.png) | Works as expected |
 | XL Monitor | ![screenshot](documentation/responsiveness/xl-home.png) | ![screenshot](documentation/responsiveness/xl-menu.png) | ![screenshot](documentation/responsiveness/xl-login.png) | ![screenshot](documentation/responsiveness/xl-register.png) | ![screenshot](documentation/responsiveness/xl-booking.png) | Works as expected |
 | 4K Monitor | ![screenshot](documentation/responsiveness/4k-home.png) | ![screenshot](documentation/responsiveness/4k-menu.png) | ![screenshot](documentation/responsiveness/4k-login.png) | ![screenshot](documentation/responsiveness/4k-register.png) | ![screenshot](documentation/responsiveness/4k-booking.png) | Works as expected |
+
+
+## Lighthouse Audit
+
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) | Some minor warnings |
+| Menu | ![screenshot](documentation/lighthouse/mobile-menu.png) | ![screenshot](documentation/lighthouse/desktop-menu.png) | Some minor warnings |
+| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) | Some minor warnings |
+| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) | Some minor warnings |
+| Booking | ![screenshot](documentation/lighthouse/mobile-booking.png) | ![screenshot](documentation/lighthouse/desktop-booking.png) | Some minor warnings |
+| View Booking | ![screenshot](documentation/lighthouse/mobile-view-booking.png) | ![screenshot](documentation/lighthouse/desktop-view-booking.png) | Some minor warnings |
