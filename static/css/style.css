@@ -16,6 +16,8 @@ body {
 /* Navbar Styles */
 .navbar.fixed-top {
     background-color: #f8f9fa;
+    z-index: 1;
+    position: relative;
 }
 
 .navbar-brand {
@@ -39,6 +41,7 @@ body {
 .alert {
     background-color: #333;
     color: #fff;
+    margin-top: 20px;
 }
 
 #id_special_occasion, #id_meal_day, #id_meal_time, #id_number_of_guests, #id_customer_name, #id_submit_button {
@@ -50,6 +53,12 @@ body {
 .error_message_notes {
     background-color: #333;
     color: #fff;
+}
+
+.error-screen {
+    z-index: 2;
+    position: relative;
+    top: 150px;
 }
 
 /* Footer Styles */
