@@ -129,3 +129,22 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site administrator, I should be able to manage reservations, so that I can keep track of the restaurant’s bookings. | ![screenshot](documentation/features/admin-delete.png) |
 | As a site administrator, I should be able to manage reviews, so that I can make sure the reviews are genuine and to keep the site clean. | ![screenshot](documentation/features/admin-review.png) |
 | As a site administrator, I should be able to manage users accounts, so that I can change details for them if they so wish. | ![screenshot](documentation/features/admin-accounts.png) |
+
+
+## Bugs
+
+- I do not have this bug screenshot either as I forgot in the moment, a bug I faced during development was when I changed the schema of the Booking model, it entirely broke functionality of the site, initially it would allow booking, but when you go to delete and edit any of the bookings, it would not allow anything and would display a 404 because of the model change, while the booking before the scheme change was still active. 
+
+- To fix this, I had to delete all bookings at once with the Django Admin panel and make sure the database was fully migrated with this new schema in place.
+
+
+- I do not have a screenshot for this one as I forgot in the moment, a bug I faced during development was setting up the delete booking functionality, and it worked initially, till it didn't because it would 404 every time you tried to delete a booking because the ID functionality was not in place which I had to swiftly work on after.
+
+- To fix this, I had to implement ID functionality to the page Views so it would count the booking deletion based on which booking was being deleted by ID.
+
+
+- When clicking the field for picking the date within the Create Booking page, it would show both a jQuery version and a standard, very old looking one. I was trying to develop the functionality of blocking previous dates being clicked and resulted in this until it was fixed.
+
+    ![screenshot](documentation/bugs/datepicker.png)
+
+    - To fix this, I had to remove a stylesheet cdn link to jQuery I was initially using, as it was still triggering it to show through the newly written code.
