@@ -148,3 +148,19 @@ Defensive programming was manually tested with the below user acceptance testing
     ![screenshot](documentation/bugs/datepicker.png)
 
     - To fix this, I had to remove a stylesheet cdn link to jQuery I was initially using, as it was still triggering it to show through the newly written code.
+
+
+### GitHub **Issues**
+
+
+**Fixed Bugs**
+
+[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3Aconor-timmis%2FMichelangelo%20label%3Abug&label=bugs)](https://github.com/conor-timmis/Michelangelo/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
+
+All previously closed/fixed bugs can be tracked [here](https://github.com/conor-timmis/Michelangelo/issues?q=is%3Aissue+is%3Aclosed).
+
+
+**Open Issues**
+
+[![GitHub issues](https://img.shields.io/github/issues/conor-timmis/Michelangelo)](https://github.com/conor-timmis/Michelangelo/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/conor-timmis/Michelangelo)](https://github.com/conor-timmis/Michelangelo/issues?q=is%3Aissue+is%3Aclosed)
