@@ -483,7 +483,8 @@ I have not noticed any differences between local (Gitpod) to the deployed versio
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Michelangelo](https://il-michelangelo.com/) | home | image | favicon and images on the home page are taken from the original restaurant's site to get a more accurate depiction |
+| [Michelangelo](https://il-michelangelo.com/) | home | image | display images on the home page are taken from the original restaurant's site to get a more accurate depiction |
+| [Vecteezy](https://sv.vecteezy.com/foton/24347490-skulptur-av-david-forbi-michelangelo-ai-generation) | entire site | favicon | the favicon used was this original image converted to an ICO after the removal of the background to be transparent |
 | [iStockPhoto](https://www.istockphoto.com/photos/default-profile-image) | home | image | used as a default profile picture for profile/review display purposes |
 
 
