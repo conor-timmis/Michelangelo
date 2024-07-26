@@ -164,3 +164,10 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/conor-
 
 [![GitHub issues](https://img.shields.io/github/issues/conor-timmis/Michelangelo)](https://github.com/conor-timmis/Michelangelo/issues)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/conor-timmis/Michelangelo)](https://github.com/conor-timmis/Michelangelo/issues?q=is%3Aissue+is%3Aclosed)
+
+
+## Unfixed Bugs
+
+
+> **NOTE:**
+> There are no remaining bugs that I am aware of.
