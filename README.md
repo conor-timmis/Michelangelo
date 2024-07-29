@@ -466,12 +466,10 @@ I have not noticed any differences between local (Gitpod) to the deployed versio
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | footer | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
+| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS webpages |
+| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up with the use of Bootstrap |
+| [Flexbox Froggy](https://flexboxfroggy.com/) | login/registration/booking pages | modern responsive layouts |
+| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layout, used in the body selector for general use |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 | [StackOverflow](https://stackoverflow.com/questions/74699339/django-crud-functionality-edit-profile-details) | for booking pages | helped with structuring my meta classes and CRUD functionality
 | [StackOverflow](https://stackoverflow.com/questions/71163476/processing-a-django-form) | template structure | for structuring the forms to be placed into html templates with django's templating tags
