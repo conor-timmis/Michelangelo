@@ -35,7 +35,7 @@ body {
 }
 
 .messages {
-    color: #fff;
+    color: #343a40;
 }
 
 .alert {
@@ -65,7 +65,6 @@ body {
 .footer {
     background-color: #f8f9fa;
     margin-top: auto;
-    flex-shrink: 0;
 }
 
 .footer h3, .footer p, .footer a {
@@ -110,6 +109,13 @@ body {
     justify-content: center;
 }
 
+.carousel-caption {
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 #carouselimages .carousel-caption h5,
 #carouselimages .carousel-caption p {
     font-size: 20px;
@@ -130,7 +136,6 @@ body {
 }
 
 .about-img img {
-    width: 40%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -363,23 +368,5 @@ textarea {
     
     .underline-navbar:hover::after {
         opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-img img {
-        width: 60%;
-    }
-}
-
-@media (max-width: 992px) {
-    .about-img img {
-        width: 80%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .about-img img {
-        width: auto;
     }
 }
