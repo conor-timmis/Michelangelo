@@ -35,6 +35,9 @@ class Booking(models.Model):
                     )
             ]
 
+    def __str__(self):
+        return f"{self.customer_name} | {self.meal_day}"
+
 
 # Class to structure the review process
 class Review(models.Model):
@@ -49,3 +52,6 @@ class Review(models.Model):
             )
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.booking.meal_day
