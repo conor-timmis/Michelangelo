@@ -1,18 +1,34 @@
 {% extends "base.html" %}
-
 {% block css %}
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 {% endblock %}
 {% block content %}
 
-<h2>Edit Booking</h2>
-
 <!-- Edit Booking Form -->
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save changes</button>
-</form>
+<main class="cb-content">
+<section class="section-padding custom-margin-bottom d-flex align-items-center">
+    <form method="post">
+        {% csrf_token %}
+        <h2>Edit your booking here!</h2>
+        <label for="id_special_occasion">Special Occasion:</label>
+        {{ form.special_occasion }}
+        <label for="id_meal_day">Meal Day:</label>
+        {{ form.meal_day }}
+        <br>
+        <label for="id_meal_time">Meal Time:</label>
+        {{ form.meal_time }}
+        <br>
+        <label for="id_number_of_guests">Number of Guests:</label>
+        {{ form.number_of_guests }}
+        <label for="id_customer_name">Customer Name:</label>
+        {{ form.customer_name }}
+        <label for="id_customer_name"></label>
+        {{ form.is_booked }}
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</section>
+</main>
 
 {% endblock %}
 

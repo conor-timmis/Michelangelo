@@ -301,6 +301,10 @@ form {
     min-height: 75vh;
 }
 
+.btn-primary {
+    margin-top: 20px;
+}
+
 /* Booking List Page */
 .booking-content h2 {
     margin-top: 30px;
