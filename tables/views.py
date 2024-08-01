@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
@@ -59,9 +60,9 @@ def delete_booking(request, booking_id):
 @login_required
 def booking_list(request):
     if request.user.is_superuser:
-        bookings = Booking.objects.all()
+        bookings = Booking.objects.filter(meal_day__lt=timezone.now().date())  # noqa
     else:
-        bookings = Booking.objects.filter(user=request.user)
+        bookings = Booking.objects.filter(user=request.user, meal_day__lt=timezone.now().date())  # noqa
 
     # How the review form is being handled
     if request.method == 'POST':
@@ -70,14 +71,13 @@ def booking_list(request):
             review = form.save(commit=False)
             review.user = request.user
             review.save()
+            messages.success(request, 'Your review has been submitted! Thank you.')
             return redirect('table_list')
         else:
             messages.error(request, 'There was an error with your submission.')
     else:
         form = ReviewForm(user=request.user)
 
-    reviews = Review.objects.all()
-
     return render(request, 'table_list.html', {
-        'form': form, 'bookings': bookings, 'reviews': reviews
+        'form': form, 'bookings': bookings,
     })
