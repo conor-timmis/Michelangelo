@@ -21,6 +21,9 @@ class BookingForm(forms.ModelForm):
     ]
     meal_time = forms.ChoiceField(choices=MEAL_TIME_CHOICES)
 
+    NUMBER_OF_GUESTS_CHOICES = [(i, str(i)) for i in range(1, 17)]
+    number_of_guests = forms.ChoiceField(choices=NUMBER_OF_GUESTS_CHOICES)
+
     # Meta class for additional options
     class Meta:
         model = Booking
