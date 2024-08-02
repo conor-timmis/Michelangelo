@@ -47,13 +47,19 @@
             {% else %}
             <p>You have no bookings.</p>
             {% endif %}
-            <h2 class="text-center">Want to leave a review?</h2>
-            <form method="post" class="text-left">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-success">Submit Review</button>
-            </form>        
-        </div>
+            <div class="container py-5">
+                <h2 class="text-center mb-4">Want to leave a review?</h2>
+                <form method="post" class="text-left">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="mb-3">
+                        <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+            </div>            
     </section>
 </div>
 
