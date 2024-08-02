@@ -47,9 +47,6 @@ class Review(models.Model):
     booking = models.ForeignKey(
         'Booking', on_delete=models.SET_NULL, null=True, related_name='reviews'
             )
-    rating = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(5)]
-            )
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 

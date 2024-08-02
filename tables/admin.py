@@ -17,7 +17,7 @@ admin.site.register(Booking, BookingAdmin)
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('user', 'booking', 'rating', 'created_at')
+    list_display = ('user', 'booking', 'created_at')
     search_fields = ('user__username', 'booking__name', 'comment')
 
 
