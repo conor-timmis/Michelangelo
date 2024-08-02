@@ -301,10 +301,6 @@ form {
     min-height: 75vh;
 }
 
-.btn-primary {
-    margin-top: 20px;
-}
-
 /* Booking List Page */
 .booking-content h2 {
     margin-top: 30px;
@@ -332,6 +328,12 @@ form {
 textarea {
     resize: none;
     height: 100px;
+}
+
+/* Edit Booking Page */
+
+.reviewButton {
+    margin-top: 15px;
 }
 
 /* Registration Page */
